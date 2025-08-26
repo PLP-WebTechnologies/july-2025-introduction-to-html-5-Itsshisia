@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Section Demo Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 5px;
+    }
+    legend {
+      font-weight: bold;
+      color: #444;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea, button {
+      margin-top: 5px;
+      padding: 8px;
+      width: 100%;
+      max-width: 400px;
+    }
+    button {
+      background: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Demo Web Page</h1>
+    <p>This page showcases lists, tables, media elements, and a complete HTML5 form.</p>
+  </header>
+
+  <!-- Lists Section -->
+  <section>
+    <h2>Lists</h2>
+    <h3>Unordered List</h3>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+    </ul>
+
+    <h3>Ordered List</h3>
+    <ol>
+      <li>Plan</li>
+      <li>Design</li>
+      <li>Develop</li>
+      <li>Deploy</li>
+    </ol>
+
+    <h3>Definition List</h3>
+    <dl>
+      <dt>HTML</dt>
+      <dd>Standard markup language for web pages.</dd>
+      <dt>CSS</dt>
+      <dd>Style sheet language for designing web pages.</dd>
+      <dt>JavaScript</dt>
+      <dd>Scripting language for dynamic web functionality.</dd>
+    </dl>
+  </section>
+
+  <!-- Table Section -->
+  <section>
+    <h2>Table</h2>
+    <table>
+      <caption><strong>Course Schedule</strong></caption>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Course</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>Web Development</td>
+          <td>10:00 - 12:00</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>Data Science</td>
+          <td>14:00 - 16:00</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>Networking</td>
+          <td>09:00 - 11:00</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Media Section -->
+  <section>
+    <h2>Media</h2>
+    <h3>Image</h3>
+    <img src="https://via.placeholder.com/400x200" alt="Sample placeholder image">
+
+    <h3>Video</h3>
+    <video controls width="400">
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h3>Audio</h3>
+    <audio controls>
+      <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </section>
+
+  <!-- Form Section -->
+  <section>
+    <h2>Contact Form</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required minlength="3">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="6">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g. 0712345678" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+        <label for="course">Select a Course:</label>
+        <select id="course" name="course" required>
+          <option value="">--Choose an option--</option>
+          <option value="web">Web Development</option>
+          <option value="data">Data Science</option>
+          <option value="network">Networking</option>
+        </select>
+
+        <label>Preferred Study Mode:</label>
+        <input type="radio" id="online" name="mode" value="online" required>
+        <label for="online">Online</label>
+        <input type="radio" id="onsite" name="mode" value="onsite">
+        <label for="onsite">On-site</label>
+
+        <label>Interests:</label>
+        <input type="checkbox" id="frontend" name="interests" value="frontend">
+        <label for="frontend">Frontend</label>
+        <input type="checkbox" id="backend" name="interests" value="backend">
+        <label for="backend">Backend</label>
+        <input type="checkbox" id="ai" name="interests" value="ai">
+        <label for="ai">AI</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Info</legend>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="website">Personal Website:</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com">
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
+      </fieldset>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</body>
+</html>
